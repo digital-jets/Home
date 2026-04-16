@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programme Schedule — Job Expo '36</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a class="navbar__brand" href="index.html" aria-label="Job Expo '36 Home">
+        <img src="assets/logo.png" alt="JETS Logo" class="navbar__logo-img">
+        <span class="navbar__brand-name">Job Expo '36</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html" class="active">Programme</a></li>
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="job-roles.html">Job Roles</a></li>
+        <li><a href="stamp-rally.html">Stamp Rally</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="thanks.html">Thanks</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= PAGE HEADER ======= -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__eyebrow">Job Expo '36</p>
+      <h1 class="page-header__title">What's On</h1>
+      <p class="page-header__desc">Three days of guided tours, roleplay experiences, and live activities across the Smart Home, Neighbourhood, and Hospital of the Future.</p>
+    </div>
+  </header>
+
+  <!-- ======= WHAT'S ON ======= -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Category info tiles -->
+      <div class="wo-info-tiles">
+        <div class="wo-info-tile">
+          <div class="wo-info-tile__icon">🗺️</div>
+          <h3 class="wo-info-tile__title">Guided Tours</h3>
+          <p class="wo-info-tile__desc">All Guided Tours can accommodate a maximum of 15 people, on a first-come-first-served basis. Register your spot through JETS Registration.</p>
+        </div>
+        <div class="wo-info-tile">
+          <div class="wo-info-tile__icon">🎭</div>
+          <h3 class="wo-info-tile__title">Roleplay</h3>
+          <p class="wo-info-tile__desc">Step into tomorrow's healthcare settings through immersive roleplay scenarios across the Smart Home, Neighbourhood, and Hospital zones. Open to all visitors.</p>
+        </div>
+        <div class="wo-info-tile">
+          <div class="wo-info-tile__icon">🎤</div>
+          <h3 class="wo-info-tile__title">Activities</h3>
+          <p class="wo-info-tile__desc">Catch the Main Stage programme, join drop-in games, and take part in live interactive challenges spread across the three-day event.</p>
+        </div>
+      </div>
+
+      <!-- Category tabs -->
+      <div class="wo-tabs" role="tablist" aria-label="Select programme type">
+        <button class="wo-tab active" data-wo="tours" role="tab" aria-selected="true">Guided Tour</button>
+        <button class="wo-tab" data-wo="roleplay" role="tab" aria-selected="false">Roleplay</button>
+        <button class="wo-tab" data-wo="activities" role="tab" aria-selected="false">Activities</button>
+        <button class="wo-tab" data-wo="workshops" role="tab" aria-selected="false">Workshops</button>
+      </div>
+
+      <!-- ===== GUIDED TOURS ===== -->
+      <div class="wo-section" id="wo-tours">
+        <div class="day-tabs">
+          <button class="day-tab active" data-group="tours" data-day="t1">Thursday - 2 July</button>
+          <button class="day-tab" data-group="tours" data-day="t2">Friday - 3 July</button>
+          <button class="day-tab" data-group="tours" data-day="t3">Saturday - 4 July</button>
+        </div>
+        <div id="t1" class="tl-section active">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🗺️</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+          </div>
+        </div>
+        <div id="t2" class="tl-section">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🗺️</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+          </div>
+        </div>
+        <div id="t3" class="tl-section">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🗺️</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ROLEPLAY ===== -->
+      <div class="wo-section" id="wo-roleplay" hidden>
+        <div class="day-tabs">
+          <button class="day-tab active" data-group="roleplay" data-day="r1">Thursday - 2 July</button>
+          <button class="day-tab" data-group="roleplay" data-day="r2">Friday - 3 July</button>
+          <button class="day-tab" data-group="roleplay" data-day="r3">Saturday - 4 July</button>
+        </div>
+        <div id="r1" class="tl-section active">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🎭</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          </div>
+        </div>
+        <div id="r2" class="tl-section">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🎭</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          </div>
+        </div>
+        <div id="r3" class="tl-section">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🎭</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ACTIVITIES ===== -->
+      <div class="wo-section" id="wo-activities" hidden>
+        <div class="day-tabs">
+          <button class="day-tab active" data-group="activities" data-day="a1">Thursday - 2 July</button>
+          <button class="day-tab" data-group="activities" data-day="a2">Friday - 3 July</button>
+          <button class="day-tab" data-group="activities" data-day="a3">Saturday - 4 July</button>
+        </div>
+
+        <div id="a1" class="tl-section active">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🎤</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Activity schedule will be confirmed closer to the event</p>
+          </div>
+        </div>
+
+        <div id="a2" class="tl-section">
+          <div class="tl-tba">
+            <p class="tl-tba__icon">🎤</p>
+            <p class="tl-tba__text">Programme to be announced</p>
+            <p class="tl-tba__sub">Activity schedule will be confirmed closer to the event</p>
+          </div>
+        </div>
+
+        <!-- SAT 4 JULY — real programme data -->
+        <div id="a3" class="tl-section">
+
+          <!-- Drop-in activities (run all day from 9:30) -->
+          <div class="tl-dropin">
+            <p class="tl-dropin__heading">Continuous Drop-In Activities &nbsp;·&nbsp; 9:30 AM – 2:30 PM</p>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">Every 30 mins</span>
+              <span class="tl-dropin__name">CHA Empathy Escape Room</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">All day</span>
+              <span class="tl-dropin__name">JETS Trading Card Café</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">All day</span>
+              <span class="tl-dropin__name">JETS Carnival Booth Games</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+          </div>
+
+          <!-- Main Stage timeline -->
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Fashion Show Kick-off</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:00</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Side Quest: Rapid Fire Kahoot</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Test your knowledge of JETS and the 36 new roles</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:00</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunchtime Fireside Chat</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">13:00</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Side Quest: This or That?</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Live Q&amp;A — share your views on future healthcare roles</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">14:00</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Closing Event</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage · Details to be confirmed</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+
+        </div><!-- end a3 -->
+      </div><!-- end wo-activities -->
+
+      <!-- ===== WORKSHOPS ===== -->
+      <div class="wo-section" id="wo-workshops" hidden>
+        <div class="day-tabs">
+          <button class="day-tab active" data-group="workshops" data-day="w1">Thursday - 2 July</button>
+          <button class="day-tab" data-group="workshops" data-day="w2">Friday - 3 July</button>
+          <button class="day-tab" data-group="workshops" data-day="w3">Saturday - 4 July</button>
+        </div>
+
+        <!-- Thursday workshops -->
+        <div id="w1" class="tl-section active">
+          <div class="workshop-cards">
+            <div class="workshop-card">
+              <div class="workshop-card__header">
+                <span class="badge badge--workshop">Workshop</span>
+              </div>
+              <h3 class="workshop-card__title">Introduction to Smart Home Health Technologies</h3>
+              <div class="workshop-card__meta">
+                <span>🗓 Thursday - 2 July &nbsp;·&nbsp; 10:00 AM – 10:45 AM</span>
+                <span>📍 Level 2, Smart Home of the Future Zone</span>
+                <span>🏢 Community Health Institute</span>
+              </div>
+              <a href="#" class="btn btn-primary workshop-card__cta">Register</a>
+            </div>
+            <div class="workshop-card">
+              <div class="workshop-card__header">
+                <span class="badge badge--workshop">Workshop</span>
+              </div>
+              <h3 class="workshop-card__title">Community Care: Roles of the Future</h3>
+              <div class="workshop-card__meta">
+                <span>🗓 Thursday - 2 July &nbsp;·&nbsp; 2:00 PM – 2:45 PM</span>
+                <span>📍 Level 2, Neighbourhood of the Future Zone</span>
+                <span>🏢 Organising Office TBC</span>
+              </div>
+              <a href="#" class="btn btn-primary workshop-card__cta">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday workshops -->
+        <div id="w2" class="tl-section">
+          <div class="workshop-cards">
+            <div class="workshop-card">
+              <div class="workshop-card__header">
+                <span class="badge badge--workshop">Workshop</span>
+              </div>
+              <h3 class="workshop-card__title">Advanced Hospital Technologies Showcase</h3>
+              <div class="workshop-card__meta">
+                <span>🗓 Friday - 3 July &nbsp;·&nbsp; 11:00 AM – 11:45 AM</span>
+                <span>📍 Level 2, Hospital of the Future Zone</span>
+                <span>🏢 Organising Office TBC</span>
+              </div>
+              <a href="#" class="btn btn-primary workshop-card__cta">Register</a>
+            </div>
+            <div class="workshop-card">
+              <div class="workshop-card__header">
+                <span class="badge badge--workshop">Workshop</span>
+              </div>
+              <h3 class="workshop-card__title">Digital Health Tools in Community Settings</h3>
+              <div class="workshop-card__meta">
+                <span>🗓 Friday - 3 July &nbsp;·&nbsp; 2:30 PM – 3:15 PM</span>
+                <span>📍 Level 2, Neighbourhood of the Future Zone</span>
+                <span>🏢 Organising Office TBC</span>
+              </div>
+              <a href="#" class="btn btn-primary workshop-card__cta">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saturday workshops -->
+        <div id="w3" class="tl-section">
+          <div class="workshop-cards">
+            <div class="workshop-card">
+              <div class="workshop-card__header">
+                <span class="badge badge--workshop">Workshop</span>
+              </div>
+              <h3 class="workshop-card__title">Workforce Innovation in Healthcare</h3>
+              <div class="workshop-card__meta">
+                <span>🗓 Saturday - 4 July &nbsp;·&nbsp; 10:00 AM – 10:45 AM</span>
+                <span>📍 CHI L4 Kampong Square</span>
+                <span>🏢 Organising Office TBC</span>
+              </div>
+              <a href="#" class="btn btn-primary workshop-card__cta">Register</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- end wo-workshops -->
+
+    </div>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Job Expo '36</p>
+          <p class="footer__tagline">The Premier Job &amp; Career Exhibition connecting employers and job seekers across Home, Neighbourhood, and Hospital sectors.</p>
+          <p class="footer__dates">📅 2 – 4 July 2026</p>
+        </div>
+        <div>
+          <p class="footer__heading">Pages</p>
+          <nav class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Programme Schedule</a>
+            <a href="exhibition.html">Exhibition Details</a>
+            <a href="job-roles.html">Job Roles</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="thanks.html">Thanks &amp; Acknowledgements</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__heading">Zones</p>
+          <nav class="footer__links">
+            <a href="exhibition.html#home-zone">Home Zone</a>
+            <a href="exhibition.html#neighbourhood-zone">Neighbourhood Zone</a>
+            <a href="exhibition.html#hospital-zone">Hospital Zone</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Job Expo '36. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

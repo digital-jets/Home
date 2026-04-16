@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JETS — Jobs Expo '36</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#0D1B3E;
+  --navy-mid:#162854;
+  --navy-light:#1E3A6E;
+  --orange:#E8620A;
+  --orange-light:#FDF0E8;
+  --orange-mid:#F4874A;
+  --bg:#F5F4F0;
+  --white:#FFFFFF;
+  --ink:#0D1B3E;
+  --muted:#6B7A99;
+  --border:rgba(13,27,62,0.10);
+  --border-strong:rgba(13,27,62,0.18);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;}
+.app{max-width:420px;margin:0 auto;background:var(--bg);min-height:100vh;}
+
+nav{display:flex;background:var(--navy);position:sticky;top:0;z-index:100;}
+nav button{flex:1;padding:14px 4px 12px;font-size:10px;font-family:'DM Sans',sans-serif;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;border:none;background:none;cursor:pointer;color:rgba(255,255,255,0.45);border-bottom:2px solid transparent;transition:all 0.2s;}
+nav button.active{color:#fff;border-bottom-color:var(--orange);}
+
+.hero{background:var(--navy);padding:32px 20px 28px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(232,98,10,0.2);pointer-events:none;}
+.hero::after{content:'';position:absolute;top:-20px;right:-20px;width:140px;height:140px;border-radius:50%;border:1px solid rgba(232,98,10,0.12);pointer-events:none;}
+.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange-mid);margin-bottom:14px;}
+.hero-logo{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:#fff;line-height:1;letter-spacing:-1px;margin-bottom:4px;}
+.hero-logo span{color:var(--orange);}
+.hero-tagline{font-family:'Syne',sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,0.55);letter-spacing:0.06em;margin-bottom:22px;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;padding:6px 12px;border-radius:20px;}
+.pill-date{background:rgba(232,98,10,0.18);color:var(--orange-mid);}
+.pill-loc{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65);}
+
+.page{display:none;padding:24px 20px 80px;}
+.page.active{display:block;}
+
+.section-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:28px 0 12px;}
+
+.stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:4px;}
+.stat-card{background:var(--white);border-radius:12px;border:1px solid var(--border);padding:14px 10px;text-align:center;}
+.stat-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1;}
+.stat-label{font-size:11px;color:var(--muted);margin-top:4px;}
+
+.info-card{background:var(--white);border-radius:12px;border:1px solid var(--border);padding:14px 16px;margin-bottom:8px;}
+.info-row{display:flex;align-items:flex-start;gap:12px;}
+.info-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;}
+.info-body .lbl{font-size:10px;color:var(--muted);margin-bottom:2px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;}
+.info-body .val{font-size:14px;color:var(--ink);line-height:1.5;}
+
+.zone-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.zone-mini{border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;transition:opacity 0.15s;}
+.zone-mini:hover{opacity:0.85;}
+.zone-mini-icon{font-size:22px;margin-bottom:6px;}
+.zone-mini-name{font-size:11px;font-weight:500;line-height:1.3;}
+
+.whats-on-tabs{display:flex;gap:0;background:var(--white);border-radius:12px;border:1px solid var(--border);padding:4px;margin-bottom:20px;}
+.wo-tab{flex:1;padding:9px 6px;font-size:11px;font-weight:500;font-family:'DM Sans',sans-serif;border:none;background:none;cursor:pointer;color:var(--muted);border-radius:8px;transition:all 0.2s;text-align:center;line-height:1.3;}
+.wo-tab.active{background:var(--navy);color:#fff;}
+
+.day-tabs{display:flex;gap:8px;margin-bottom:18px;}
+.day-tab{flex:1;padding:9px 6px;border-radius:20px;border:1px solid var(--border);background:var(--white);font-size:12px;font-weight:500;cursor:pointer;color:var(--muted);transition:all 0.2s;text-align:center;font-family:'DM Sans',sans-serif;}
+.day-tab.active{background:var(--orange);color:white;border-color:var(--orange);}
+
+.tl-item{display:flex;gap:12px;margin-bottom:0;}
+.tl-left{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;width:44px;}
+.tl-time{font-size:11px;font-weight:500;color:var(--muted);padding-top:15px;}
+.tl-mid{display:flex;flex-direction:column;align-items:center;width:16px;flex-shrink:0;}
+.tl-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);flex-shrink:0;margin-top:18px;}
+.tl-vline{width:1px;background:var(--border);flex:1;min-height:10px;}
+.tl-card{flex:1;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:10px;}
+.tl-card-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:3px;}
+.tl-card-meta{font-size:12px;color:var(--muted);}
+.tl-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-top:8px;}
+.tag-tour{background:var(--orange-light);color:#8B3A05;}
+.tag-roleplay{background:#EEF1FA;color:#1E2E6B;}
+.tag-community{background:#EAF2ED;color:#1E4A2D;}
+.tag-open{background:#F3F3F3;color:#555;}
+
+.zone-section{margin-bottom:28px;}
+.zone-header{border-radius:14px;padding:18px 16px;margin-bottom:12px;}
+.zh-navy{background:var(--navy);}
+.zh-orange{background:var(--orange);}
+.zh-mid{background:var(--navy-mid);}
+.zone-eyebrow{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;margin-bottom:6px;color:#fff;}
+.zone-name{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:4px;}
+.zone-desc{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.5;}
+
+.exhibitor-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:border-color 0.2s;}
+.exhibitor-card:hover{border-color:var(--border-strong);}
+.ex-logo{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;flex-shrink:0;color:#fff;}
+.ex-navy{background:var(--navy);}
+.ex-orange{background:var(--orange);}
+.ex-mid{background:var(--navy-mid);}
+.ex-info{flex:1;}
+.ex-name{font-size:14px;font-weight:500;color:var(--ink);}
+.ex-role{font-size:12px;color:var(--muted);margin-top:2px;}
+.ex-arrow{font-size:18px;color:var(--border-strong);}
+
+.map-wrap{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.map-legend{display:flex;gap:14px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--border);}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);}
+.legend-dot{width:10px;height:10px;border-radius:3px;}
+
+.overlay{display:none;position:fixed;inset:0;background:rgba(13,27,62,0.5);z-index:200;align-items:flex-end;justify-content:center;}
+.overlay.open{display:flex;}
+.sheet{background:var(--white);border-radius:20px 20px 0 0;padding:22px 20px 40px;max-width:420px;width:100%;position:relative;}
+.sheet-handle{width:36px;height:4px;background:var(--border-strong);border-radius:2px;margin:0 auto 18px;}
+.sheet-logo{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:14px;}
+.sheet-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.sheet-sub{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.sheet-body{font-size:14px;color:var(--ink);line-height:1.65;margin-bottom:20px;}
+.sheet-close{position:absolute;top:16px;right:16px;width:30px;height:30px;border-radius:50%;background:var(--bg);border:none;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.cta-btn{width:100%;padding:14px;background:var(--navy);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;letter-spacing:0.02em;}
+.cta-btn:hover{background:var(--navy-light);}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="hero">
+    <div class="hero-eyebrow">Singapore · 2 – 4 July 2026</div>
+    <div class="hero-logo">JE<span>T</span>S</div>
+    <div class="hero-tagline">Jobs Expo '36</div>
+    <div class="hero-pills">
+      <span class="pill pill-date">2–4 July 2026</span>
+      <span class="pill pill-loc">Marina Bay Sands</span>
+    </div>
+  </div>
+
+  <nav>
+    <button class="active" onclick="showPage('home',this)">Home</button>
+    <button onclick="showPage('whatson',this)">What's On</button>
+    <button onclick="showPage('exhibition',this)">Exhibition</button>
+    <button onclick="showPage('map',this)">Map</button>
+  </nav>
+
+  <!-- HOME -->
+  <div id="home" class="page active">
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Days</div></div>
+      <div class="stat-card"><div class="stat-num">48</div><div class="stat-label">Exhibitors</div></div>
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Zones</div></div>
+    </div>
+    <div class="section-label">Event info</div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="info-icon" style="background:var(--orange-light);">📍</div>
+        <div class="info-body"><div class="lbl">Venue</div><div class="val">Marina Bay Sands, Expo Hall B<br>10 Bayfront Ave, Singapore</div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="info-icon" style="background:#EEF1FA;">🕐</div>
+        <div class="info-body"><div class="lbl">Opening hours</div><div class="val">Thu–Fri &nbsp;10:00 – 18:00<br>Sat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:00 – 16:00</div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="info-icon" style="background:#EAF2ED;">🎫</div>
+        <div class="info-body"><div class="lbl">Admission</div><div class="val">Free entry · Walk-ins welcome<br>Online registration encouraged</div></div>
+      </div>
+    </div>
+    <div class="section-label">What's on</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:4px;">
+      <div style="background:var(--orange-light);border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;" onclick="showPage('whatson',document.querySelectorAll('nav button')[1]);setWoTab('tours')">
+        <div style="font-size:22px;margin-bottom:6px;">🗺</div>
+        <div style="font-size:11px;font-weight:500;color:#8B3A05;line-height:1.3;">Guided<br>Tours</div>
+      </div>
+      <div style="background:#EEF1FA;border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;" onclick="showPage('whatson',document.querySelectorAll('nav button')[1]);setWoTab('roleplay')">
+        <div style="font-size:22px;margin-bottom:6px;">🎭</div>
+        <div style="font-size:11px;font-weight:500;color:#1E2E6B;line-height:1.3;">Roleplay<br>Showtimes</div>
+      </div>
+      <div style="background:#EAF2ED;border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;" onclick="showPage('whatson',document.querySelectorAll('nav button')[1]);setWoTab('community')">
+        <div style="font-size:22px;margin-bottom:6px;">🤝</div>
+        <div style="font-size:11px;font-weight:500;color:#1E4A2D;line-height:1.3;">Community<br>Programmes</div>
+      </div>
+    </div>
+    <div class="section-label">Exhibition zones</div>
+    <div class="zone-grid">
+      <div class="zone-mini" style="background:var(--navy);" onclick="showPage('exhibition',document.querySelectorAll('nav button')[2])">
+        <div class="zone-mini-icon">🏠</div>
+        <div class="zone-mini-name" style="color:#fff;">Home</div>
+      </div>
+      <div class="zone-mini" style="background:var(--orange);" onclick="showPage('exhibition',document.querySelectorAll('nav button')[2])">
+        <div class="zone-mini-icon">🏘</div>
+        <div class="zone-mini-name" style="color:#fff;">Neighbourhood</div>
+      </div>
+      <div class="zone-mini" style="background:var(--navy-mid);" onclick="showPage('exhibition',document.querySelectorAll('nav button')[2])">
+        <div class="zone-mini-icon">🏥</div>
+        <div class="zone-mini-name" style="color:#fff;">Hospital</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT'S ON -->
+  <div id="whatson" class="page">
+    <div class="whats-on-tabs">
+      <button class="wo-tab active" id="tab-tours" onclick="setWoTab('tours')">Guided Tours</button>
+      <button class="wo-tab" id="tab-roleplay" onclick="setWoTab('roleplay')">Roleplay</button>
+      <button class="wo-tab" id="tab-community" onclick="setWoTab('community')">Community</button>
+    </div>
+
+    <div id="section-tours">
+      <div class="day-tabs">
+        <button class="day-tab active" onclick="showDayWo(this,'t1')">2 Jul</button>
+        <button class="day-tab" onclick="showDayWo(this,'t2')">3 Jul</button>
+        <button class="day-tab" onclick="showDayWo(this,'t3')">4 Jul</button>
+      </div>
+      <div id="t1">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:30</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Home Zone Guided Tour</div><div class="tl-card-meta">Meet at Zone A entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">12:00</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Full Hall Tour (All Zones)</div><div class="tl-card-meta">Meet at main entrance · 90 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">14:30</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Hospital Zone Guided Tour</div><div class="tl-card-meta">Meet at Zone C entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">16:00</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Neighbourhood Zone Tour</div><div class="tl-card-meta">Meet at Zone B entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+      </div>
+      <div id="t2" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:00</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Full Hall Tour (All Zones)</div><div class="tl-card-meta">Meet at main entrance · 90 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">13:00</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Home Zone Guided Tour</div><div class="tl-card-meta">Meet at Zone A entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">15:30</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Hospital Zone Guided Tour</div><div class="tl-card-meta">Meet at Zone C entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+      </div>
+      <div id="t3" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:30</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Full Hall Tour (All Zones)</div><div class="tl-card-meta">Meet at main entrance · 60 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">13:00</div></div><div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Neighbourhood Zone Tour</div><div class="tl-card-meta">Meet at Zone B entrance · 45 min</div><div class="tl-tag tag-tour">Tour</div></div></div>
+      </div>
+    </div>
+
+    <div id="section-roleplay" style="display:none;">
+      <div class="day-tabs">
+        <button class="day-tab active" onclick="showDayRp(this,'r1')">2 Jul</button>
+        <button class="day-tab" onclick="showDayRp(this,'r2')">3 Jul</button>
+        <button class="day-tab" onclick="showDayRp(this,'r3')">4 Jul</button>
+      </div>
+      <div id="r1">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">11:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">A Day in the Life: Home Care Aide</div><div class="tl-card-meta">Main Stage · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">13:30</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Community Nurse — First Shift</div><div class="tl-card-meta">Stage B · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">15:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Hospital Ward: Behind the Scenes</div><div class="tl-card-meta">Main Stage · 40 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+      </div>
+      <div id="r2" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:30</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Social Worker: A Home Visit</div><div class="tl-card-meta">Stage B · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">14:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">A Day in the Life: Home Care Aide</div><div class="tl-card-meta">Main Stage · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">16:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Hospital Ward: Behind the Scenes</div><div class="tl-card-meta">Main Stage · 40 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+      </div>
+      <div id="r3" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">11:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Community Nurse — First Shift</div><div class="tl-card-meta">Stage B · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">13:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#3B54C0;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Social Worker: A Home Visit</div><div class="tl-card-meta">Main Stage · 30 min showtime</div><div class="tl-tag tag-roleplay">Roleplay</div></div></div>
+      </div>
+    </div>
+
+    <div id="section-community" style="display:none;">
+      <div class="day-tabs">
+        <button class="day-tab active" onclick="showDayCom(this,'c1')">2 Jul</button>
+        <button class="day-tab" onclick="showDayCom(this,'c2')">3 Jul</button>
+        <button class="day-tab" onclick="showDayCom(this,'c3')">4 Jul</button>
+      </div>
+      <div id="c1">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Opening Ceremony</div><div class="tl-card-meta">Main Stage · All welcome</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">11:30</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Resume Clinic</div><div class="tl-card-meta">Workshop Room 1 · Bring your CV</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">14:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Meet the Employers</div><div class="tl-card-meta">Networking Lounge · Drop in</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">16:30</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Caregiver Support Sharing Circle</div><div class="tl-card-meta">Community Room · 60 min</div><div class="tl-tag tag-community">Community</div></div></div>
+      </div>
+      <div id="c2" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:30</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Speed Networking</div><div class="tl-card-meta">Networking Lounge · 45 min</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">12:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Interview Skills Workshop</div><div class="tl-card-meta">Workshop Room 2 · WSG</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">15:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">On-the-spot Interviews</div><div class="tl-card-meta">All exhibitor booths · Drop in</div><div class="tl-tag tag-community">Community</div></div></div>
+      </div>
+      <div id="c3" style="display:none;">
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">10:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Job Application Clinic</div><div class="tl-card-meta">Workshop Room 1 · Bring your CV</div><div class="tl-tag tag-community">Community</div></div></div>
+        <div class="tl-item"><div class="tl-left"><div class="tl-time">13:00</div></div><div class="tl-mid"><div class="tl-dot" style="background:#2B7A4B;"></div><div class="tl-vline"></div></div><div class="tl-card"><div class="tl-card-title">Closing Ceremony & Lucky Draw</div><div class="tl-card-meta">Main Stage · All welcome</div><div class="tl-tag tag-community">Community</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXHIBITION -->
+  <div id="exhibition" class="page">
+    <div class="zone-section">
+      <div class="zone-header zh-navy">
+        <div class="zone-eyebrow">Zone A</div>
+        <div class="zone-name">🏠 Home</div>
+        <div class="zone-desc">Home care, personal care aides & domestic service employers</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Comfort Keepers SG','Home Care Provider · Zone A','Providing in-home companionship, personal care, and daily living assistance. Hiring full-time and part-time care associates across Singapore.','ex-navy','CK')">
+        <div class="ex-logo ex-navy">CK</div><div class="ex-info"><div class="ex-name">Comfort Keepers SG</div><div class="ex-role">Home Care Provider · 12 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Agency for Integrated Care','Government Agency · Zone A','AIC supports a network of community care partners. Discover roles in care coordination, case management and outreach.','ex-navy','AI')">
+        <div class="ex-logo ex-navy">AI</div><div class="ex-info"><div class="ex-name">Agency for Integrated Care</div><div class="ex-role">Government Agency · Multiple roles</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Homage','Home Care Tech · Zone A','Tech-enabled home care matching platform. Hiring care professionals and operations staff islandwide.','ex-navy','Hm')">
+        <div class="ex-logo ex-navy">Hm</div><div class="ex-info"><div class="ex-name">Homage</div><div class="ex-role">Home Care Tech · 8 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Econ Healthcare','Eldercare Group · Zone A','Established eldercare group offering nursing and care roles across home and centre settings.','ex-navy','Ec')">
+        <div class="ex-logo ex-navy">Ec</div><div class="ex-info"><div class="ex-name">Econ Healthcare</div><div class="ex-role">Eldercare Group · 20 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+    </div>
+
+    <div class="zone-section">
+      <div class="zone-header zh-orange">
+        <div class="zone-eyebrow">Zone B</div>
+        <div class="zone-name">🏘 Neighbourhood</div>
+        <div class="zone-desc">Community services, social work & grassroots employers</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('NCSS','National Council of Social Service · Zone B','Umbrella body for social service agencies in Singapore. Explore roles in social work, family services, and youth development.','ex-orange','NC')">
+        <div class="ex-logo ex-orange">NC</div><div class="ex-info"><div class="ex-name">NCSS</div><div class="ex-role">Social Service · Multiple agencies</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('People\'s Association','Government Body · Zone B','PA manages community centres and grassroots organisations. Hiring programme executives and community outreach officers.','ex-orange','PA')">
+        <div class="ex-logo ex-orange">PA</div><div class="ex-info"><div class="ex-name">People's Association</div><div class="ex-role">Community & Grassroots · 15 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Fei Yue Community Services','VWO · Zone B','Full-range social services VWO covering family, elderly and children. Hiring social workers and care staff.','ex-orange','FY')">
+        <div class="ex-logo ex-orange">FY</div><div class="ex-info"><div class="ex-name">Fei Yue Community Services</div><div class="ex-role">VWO · 10 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Silver Ribbon SG','Mental Health NGO · Zone B','Singapore\'s mental health advocacy NGO. Hiring counsellors and community educators.','ex-orange','SR')">
+        <div class="ex-logo ex-orange">SR</div><div class="ex-info"><div class="ex-name">Silver Ribbon SG</div><div class="ex-role">Mental Health NGO · 5 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+    </div>
+
+    <div class="zone-section">
+      <div class="zone-header zh-mid">
+        <div class="zone-eyebrow">Zone C</div>
+        <div class="zone-name">🏥 Hospital</div>
+        <div class="zone-desc">Public hospitals, specialist centres & allied health employers</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Singapore General Hospital','Public Hospital · Zone C','SGH is Singapore\'s flagship tertiary hospital. Hiring nurses, allied health professionals and healthcare assistants.','ex-mid','SG')">
+        <div class="ex-logo ex-mid">SG</div><div class="ex-info"><div class="ex-name">Singapore General Hospital</div><div class="ex-role">Public Hospital · 30+ openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Tan Tock Seng Hospital','Public Hospital · Zone C','TTSH is a multi-specialty tertiary hospital. Hiring across nursing, pharmacy, physiotherapy and more.','ex-mid','TT')">
+        <div class="ex-logo ex-mid">TT</div><div class="ex-info"><div class="ex-name">Tan Tock Seng Hospital</div><div class="ex-role">Public Hospital · 25 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('MOH Holdings','Healthcare Cluster · Zone C','MOHH manages Singapore\'s public healthcare workforce. Roles in admin, HR, IT and strategic planning.','ex-mid','MH')">
+        <div class="ex-logo ex-mid">MH</div><div class="ex-info"><div class="ex-name">MOH Holdings</div><div class="ex-role">Healthcare Cluster · 18 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+      <div class="exhibitor-card" onclick="openSheet('Parkway Pantai','Private Hospital Group · Zone C','Regional private hospital group. Hiring clinical and non-clinical roles across Mount Elizabeth, Gleneagles and more.','ex-mid','PP')">
+        <div class="ex-logo ex-mid">PP</div><div class="ex-info"><div class="ex-name">Parkway Pantai</div><div class="ex-role">Private Hospital Group · 22 openings</div></div><div class="ex-arrow">›</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div id="map" class="page">
+    <div class="map-wrap">
+      <svg width="100%" viewBox="0 0 380 310" xmlns="http://www.w3.org/2000/svg">
+        <rect width="380" height="310" fill="#F5F4F0"/>
+        <rect x="10" y="10" width="360" height="290" rx="10" fill="white" stroke="#E0DDD8" stroke-width="1"/>
+        <text x="190" y="34" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" fill="#6B7A99" font-weight="700" letter-spacing="2">HALL B · FLOOR PLAN</text>
+        <rect x="24" y="46" width="332" height="238" rx="6" fill="#F5F4F0" stroke="#E0DDD8" stroke-width="0.5"/>
+        <rect x="34" y="56" width="148" height="105" rx="6" fill="#EEF1FA" stroke="#162854" stroke-width="1.5"/>
+        <text x="108" y="91" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" fill="#0D1B3E" font-weight="700">Home</text>
+        <text x="108" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3A6E">Zone A · Booths A1–A4</text>
+        <rect x="198" y="56" width="152" height="105" rx="6" fill="#FDF0E8" stroke="#E8620A" stroke-width="1.5"/>
+        <text x="274" y="91" text-anchor="middle" font-family="Syne,sans-serif" font-size="11" fill="#8B3A05" font-weight="700">Neighbourhood</text>
+        <text x="274" y="107" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#C04A08">Zone B · Booths B1–B4</text>
+        <rect x="178" y="56" width="20" height="105" fill="#F5F4F0"/>
+        <text x="188" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9A9A94" transform="rotate(-90 188 115)">Aisle</text>
+        <rect x="34" y="175" width="316" height="97" rx="6" fill="#EEF3F9" stroke="#162854" stroke-width="1.5"/>
+        <text x="192" y="212" text-anchor="middle" font-family="Syne,sans-serif" font-size="13" fill="#0D1B3E" font-weight="700">Hospital</text>
+        <text x="192" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3A6E">Zone C · Booths C1–C4</text>
+        <rect x="148" y="164" width="84" height="10" rx="2" fill="#E0DDD8"/>
+        <text x="190" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#9A9A94">Main Aisle</text>
+        <rect x="34" y="46" width="316" height="10" fill="#F5F4F0"/>
+        <rect x="300" y="110" width="46" height="20" rx="3" fill="#FDF0E8"/>
+        <text x="323" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8B3A05" font-weight="500">Stage A</text>
+        <rect x="34" y="110" width="40" height="20" rx="3" fill="#EEF1FA"/>
+        <text x="54" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#1E3A6E" font-weight="500">Info</text>
+        <rect x="148" y="279" width="84" height="16" rx="5" fill="#0D1B3E"/>
+        <text x="190" y="291" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="white" font-weight="500">← Entrance</text>
+      </svg>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#EEF1FA;border:1.5px solid #162854;"></div>Home / Hospital</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#FDF0E8;border:1.5px solid #E8620A;"></div>Neighbourhood</div>
+      </div>
+    </div>
+    <div class="section-label">Getting there</div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="info-icon" style="background:#EEF1FA;">🚇</div>
+        <div class="info-body"><div class="lbl">MRT</div><div class="val">Bayfront MRT (CE1/DT16) · 3 min walk via Link Bridge</div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="info-icon" style="background:var(--orange-light);">🚗</div>
+        <div class="info-body"><div class="lbl">By car</div><div class="val">Sands Expo carpark via Bayfront Ave. Surcharges apply on weekdays.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL SHEET -->
+<div class="overlay" id="overlay" onclick="closeSheet(event)">
+  <div class="sheet" id="sheet">
+    <div class="sheet-handle"></div>
+    <button class="sheet-close" onclick="closeSheet(null)">✕</button>
+    <div id="sheetLogo" class="sheet-logo ex-navy">XX</div>
+    <div class="sheet-title" id="sheetTitle"></div>
+    <div class="sheet-sub" id="sheetSub"></div>
+    <div class="sheet-body" id="sheetBody"></div>
+    <button class="cta-btn">View open roles →</button>
+  </div>
+</div>
+
+<script>
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+function setWoTab(tab) {
+  ['tours','roleplay','community'].forEach(t => {
+    document.getElementById('section-'+t).style.display = t===tab ? 'block' : 'none';
+    document.getElementById('tab-'+t).classList.toggle('active', t===tab);
+  });
+}
+function showDayWo(btn, id) {
+  const siblings = btn.parentElement.querySelectorAll('.day-tab');
+  const ids = ['t1','t2','t3'];
+  siblings.forEach((b,i) => { b.classList.remove('active'); document.getElementById(ids[i]).style.display='none'; });
+  btn.classList.add('active');
+  document.getElementById(id).style.display='block';
+}
+function showDayRp(btn, id) {
+  const siblings = btn.parentElement.querySelectorAll('.day-tab');
+  const ids = ['r1','r2','r3'];
+  siblings.forEach((b,i) => { b.classList.remove('active'); document.getElementById(ids[i]).style.display='none'; });
+  btn.classList.add('active');
+  document.getElementById(id).style.display='block';
+}
+function showDayCom(btn, id) {
+  const siblings = btn.parentElement.querySelectorAll('.day-tab');
+  const ids = ['c1','c2','c3'];
+  siblings.forEach((b,i) => { b.classList.remove('active'); document.getElementById(ids[i]).style.display='none'; });
+  btn.classList.add('active');
+  document.getElementById(id).style.display='block';
+}
+function openSheet(name, sub, body, logoClass, initials) {
+  const logo = document.getElementById('sheetLogo');
+  logo.className = 'sheet-logo ' + logoClass;
+  logo.innerText = initials;
+  document.getElementById('sheetTitle').innerText = name;
+  document.getElementById('sheetSub').innerText = sub;
+  document.getElementById('sheetBody').innerText = body;
+  document.getElementById('overlay').classList.add('open');
+}
+function closeSheet(e) {
+  if (!e || e.target === document.getElementById('overlay')) {
+    document.getElementById('overlay').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>

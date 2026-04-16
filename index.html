@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Expo '36 — Where Careers Begin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a class="navbar__brand" href="index.html" aria-label="Job Expo '36 Home">
+        <img src="assets/logo.png" alt="JETS Logo" class="navbar__logo-img">
+        <span class="navbar__brand-name">Job Expo '36</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="schedule.html">Programme</a></li>
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="job-roles.html">Job Roles</a></li>
+        <li><a href="stamp-rally.html">Stamp Rally</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="thanks.html">Thanks</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">2 – 4 July 2026</span>
+      <h1 class="hero__title">Job Expo <span>'36</span></h1>
+      <p class="hero__subtitle">Future Workforce for Future Health</p>
+      <p class="hero__tagline">
+        Explore 36 new healthcare roles across the Smart Home, Neighbourhood, and Hospital of the Future.
+        Discover your path, meet employers, and shape the workforce of 2036.
+      </p>
+      <div class="hero__actions">
+        <a href="schedule.html" class="btn btn-primary">View Programme</a>
+        <a href="exhibition.html" class="btn btn-outline">Explore Exhibition</a>
+      </div>
+      <div class="hero__countdown" id="countdown" aria-label="Countdown to JETS">
+        <div class="countdown__unit"><span id="cd-days">--</span><small>days</small></div>
+        <div class="countdown__unit"><span id="cd-hours">--</span><small>hrs</small></div>
+        <div class="countdown__unit"><span id="cd-mins">--</span><small>min</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= QUICK ACTIONS ======= -->
+  <nav class="quick-actions" aria-label="Quick navigation">
+    <div class="container quick-actions__inner">
+      <a href="schedule.html" class="qa-btn">🗓 Programme</a>
+      <a href="job-roles.html" class="qa-btn">💼 Job Roles</a>
+      <a href="stamp-rally.html" class="qa-btn">🎟 Stamp Rally</a>
+      <a href="exhibition.html" class="qa-btn">🗺 Exhibition</a>
+    </div>
+  </nav>
+
+  <!-- ======= ABOUT JETS ======= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-eyebrow">Who We Are</span>
+          <h2 class="section-title">About JETS</h2>
+          <p>
+            Jobs Expo Thirty Six (JETS) is a landmark careers exhibition by Community Health Institutes (CHI),
+            themed <em>Future Workforce for Future Health</em>. It brings together healthcare employers,
+            job seekers, and industry leaders to explore 36 new roles shaping home, community, and hospital
+            care in 2036.
+          </p>
+          <p>
+            Walk through three immersive zones, try hands-on roleplay experiences, attend the main stage
+            programme, and complete your stamp rally boarding pass. Whether you are a student, a career
+            switcher, or an experienced professional, JETS is your gateway to the future of healthcare.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ZONE HIGHLIGHTS ======= -->
+  <section class="section" style="background: var(--slate-100); padding-top: 3.5rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-eyebrow">Explore</span>
+        <h2 class="section-title">Exhibition Zones</h2>
+        <p class="section-desc">Three specialised zones — one unmissable event</p>
+      </div>
+      <div class="cards-grid">
+
+        <article class="card card--home">
+          <div class="card__body">
+            <div class="card__icon">🏠</div>
+            <h3 class="card__title">Smart Home of the Future</h3>
+            <p class="card__text">
+              Discover roles supporting care at home — AI home assistants, smart monitoring devices,
+              tele-rehabilitation, and remote care coordination for independent living.
+            </p>
+            <a href="exhibition.html#home-zone" class="card__link">Explore Home Zone →</a>
+          </div>
+        </article>
+
+        <article class="card card--neighbourhood">
+          <div class="card__body">
+            <div class="card__icon">🏘️</div>
+            <h3 class="card__title">Neighbourhood of the Future</h3>
+            <p class="card__text">
+              Explore community-based care roles — polyclinic services, social support workers,
+              community health navigators, and preventive health programmes close to home.
+            </p>
+            <a href="exhibition.html#neighbourhood-zone" class="card__link">Explore Neighbourhood Zone →</a>
+          </div>
+        </article>
+
+        <article class="card card--hospital">
+          <div class="card__body">
+            <div class="card__icon">🏥</div>
+            <h3 class="card__title">Hospital of the Future</h3>
+            <p class="card__text">
+              Connect with acute-care employers across operating theatres, diagnostic services,
+              nursing, allied health, and advanced medical technology roles in future hospitals.
+            </p>
+            <a href="exhibition.html#hospital-zone" class="card__link">Explore Hospital Zone →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA CARDS ======= -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-eyebrow">Plan Your Visit</span>
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-desc">Make the most of three exciting days</p>
+      </div>
+      <div class="cards-grid">
+
+        <article class="card">
+          <div class="card__color-bar card__color-bar--default"></div>
+          <div class="card__body">
+            <div class="card__icon">🗓️</div>
+            <h3 class="card__title">Programme Schedule</h3>
+            <p class="card__text">
+              Guided tours, roleplay experiences, and main stage activities across three days.
+              Browse the full programme and plan your visit.
+            </p>
+            <a href="schedule.html" class="card__link">View Schedule →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__color-bar card__color-bar--default"></div>
+          <div class="card__body">
+            <div class="card__icon">🗺️</div>
+            <h3 class="card__title">Exhibition Details</h3>
+            <p class="card__text">
+              Explore all three zones of the future — Home, Neighbourhood, and Hospital — and
+              find out which employers and organisations are exhibiting at JETS.
+            </p>
+            <a href="exhibition.html" class="card__link">View Exhibition →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__color-bar card__color-bar--default"></div>
+          <div class="card__body">
+            <div class="card__icon">💼</div>
+            <h3 class="card__title">36 New Roles</h3>
+            <p class="card__text">
+              Discover the 36 new healthcare roles of 2036 across Home, Neighbourhood, and Hospital zones.
+              Filter by zone and search by role to find what interests you.
+            </p>
+            <a href="job-roles.html" class="card__link">Browse Roles →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__color-bar" style="background: var(--brand-orange);"></div>
+          <div class="card__body">
+            <div class="card__icon">🎟️</div>
+            <h3 class="card__title">Stamp Rally</h3>
+            <p class="card__text">
+              Visit all five stations, share your input, and collect stamps on your boarding pass.
+              Redeem at the counter for an exclusive JETS character pin.
+            </p>
+            <a href="stamp-rally.html" class="card__link">Start Rally →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= VISITOR JOURNEY ======= -->
+  <section class="section" style="background: var(--cyan-50); padding-top: 3rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2rem;">
+        <span class="section-eyebrow">Your Journey</span>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-desc" style="margin-bottom: 0;">Four simple steps to make the most of JETS.</p>
+      </div>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <div class="journey-step__icon journey-step__icon--1">✅</div>
+          <div class="journey-step__label">Step 1</div>
+          <div class="journey-step__name">Check-In</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step__icon journey-step__icon--2">🔍</div>
+          <div class="journey-step__label">Step 2</div>
+          <div class="journey-step__name">Seek &amp; Stamp</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step__icon journey-step__icon--3">📚</div>
+          <div class="journey-step__label">Step 3</div>
+          <div class="journey-step__name">Level-Up</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step__icon journey-step__icon--4">🏅</div>
+          <div class="journey-step__label">Step 4</div>
+          <div class="journey-step__name">Time to Fly!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Job Expo '36</p>
+          <p class="footer__tagline">
+            The Premier Job &amp; Career Exhibition connecting employers and job seekers across
+            Home, Neighbourhood, and Hospital sectors.
+          </p>
+          <p class="footer__dates">📅 2 – 4 July 2026</p>
+        </div>
+        <div>
+          <p class="footer__heading">Pages</p>
+          <nav class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Programme Schedule</a>
+            <a href="exhibition.html">Exhibition Details</a>
+            <a href="job-roles.html">Job Roles</a>
+            <a href="stamp-rally.html">Stamp Rally</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="thanks.html">Thanks &amp; Acknowledgements</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__heading">Zones</p>
+          <nav class="footer__links">
+            <a href="exhibition.html#home-zone">Home Zone</a>
+            <a href="exhibition.html#neighbourhood-zone">Neighbourhood Zone</a>
+            <a href="exhibition.html#hospital-zone">Hospital Zone</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Job Expo '36. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

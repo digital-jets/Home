@@ -1,0 +1,45 @@
+CONTENT NEEDED — JETS Website
+Last updated: April 2026
+============================================================
+
+HOMEPAGE (index.html)
+- Venue name and full address
+  → Currently shows "[Venue — to be confirmed]" in the quick-actions strip
+  → Replace in: the About section and/or footer once confirmed
+
+SCHEDULE (schedule.html)
+- Guided Tours programme for Thu 2 Jul & Fri 3 Jul
+  → Currently shows styled "Programme to be announced" placeholder
+- Roleplay sessions for Thu 2 Jul & Fri 3 Jul
+  → Currently shows styled "Programme to be announced" placeholder
+- Activities programme for Thu 2 Jul & Fri 3 Jul
+  → Currently shows styled "Programme to be announced" placeholder
+- Workshop organiser names (4 of 5 workshops still say "Organising Office TBC")
+
+EXHIBITION (exhibition.html)
+- Actual floorplan image
+  → Save as: assets/floorplan.png
+  → Then: remove <div class="floorplan-diagram"> and uncomment the <img> tag
+- Exhibitor / employer names and booth descriptions for each zone
+  → Currently no exhibitor list; zone accordions show role cards only
+
+THANKS PAGE (thanks.html)
+- Sponsor logos and organisation names
+  → 9 sponsor slots total: Gold x2, Silver x3, Bronze x4
+  → Replace each "Placeholder Gold/Silver/Bronze Sponsor" card
+
+STATION PAGES (station.html)
+- Mentimeter iframe embed code for each of the 5 stations:
+    ?id=home          → Home Zone station
+    ?id=neighbourhood → Neighbourhood Zone station
+    ?id=hospital      → Hospital Zone station
+    ?id=skills        → Skills Development station
+    ?id=insights      → Expert Insights station
+  → In each station, remove <div class="station-embed-placeholder"> and paste your Mentimeter <iframe>
+
+FONTS
+- NexaBold.woff2 and NexaBold.woff needed at: fonts/ (project root)
+  → Extract from: nexa-font-family 2.zip
+  → Convert OTF → WOFF2/WOFF using a tool like FontSquirrel or cloudconvert.com
+  → File paths expected: fonts/NexaBold.woff2 and fonts/NexaBold.woff
+  → Until added, site falls back to Inter (Google Fonts)

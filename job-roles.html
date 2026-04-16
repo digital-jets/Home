@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Roles — Job Expo '36</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a class="navbar__brand" href="index.html" aria-label="Job Expo '36 Home">
+        <img src="assets/logo.png" alt="JETS Logo" class="navbar__logo-img">
+        <span class="navbar__brand-name">Job Expo '36</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html">Programme</a></li>
+        <li><a href="exhibition.html">Exhibition</a></li>
+        <li><a href="job-roles.html" class="active">Job Roles</a></li>
+        <li><a href="stamp-rally.html">Stamp Rally</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="thanks.html">Thanks</a></li>
+      </ul>
+      <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= PAGE HEADER ======= -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__eyebrow">Job Expo '36</p>
+      <h1 class="page-header__title">Job Roles</h1>
+      <p class="page-header__desc">Discover 36 new healthcare roles across the Smart Home, Neighbourhood, and Hospital of the Future. Filter by zone or search by role title.</p>
+    </div>
+  </header>
+
+  <!-- ======= JOB ROLES ======= -->
+  <main class="section">
+    <div class="container">
+
+      <div class="filter-bar" role="group" aria-label="Filter job roles">
+        <span class="filter-bar__label">Filter:</span>
+        <button class="filter-btn active" data-zone="all">All Zones</button>
+        <button class="filter-btn" data-zone="home">🏠 Home</button>
+        <button class="filter-btn" data-zone="neighbourhood">🏘️ Neighbourhood</button>
+        <button class="filter-btn" data-zone="hospital">🏥 Hospital</button>
+        <div class="search-bar">
+          <span style="color: var(--slate-400); font-size:0.9rem;">🔍</span>
+          <input type="search" placeholder="Search roles…" aria-label="Search job roles" />
+        </div>
+      </div>
+
+      <div class="no-results" aria-live="polite">
+        <p style="font-size:1.05rem;">No roles found. Try a different filter or keyword.</p>
+      </div>
+
+      <div class="roles-grid" id="rolesGrid">
+
+        <!-- SMART HOME OF THE FUTURE -->
+        <article class="role-card" data-zone="home"
+          data-qualification="Diploma / Degree in Nursing, Allied Health, or Care Management"
+          data-contract="Full-time / Part-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">🏠</div>
+            <h3 class="role-card__title">Smart Home Care Coordinator</h3>
+            <p class="role-card__desc">Coordinate AI-enabled home care services for elderly and vulnerable residents, ensuring seamless support across remote monitoring and in-person visits.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Home / Remote care setting</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="home"
+          data-qualification="Degree in Physiotherapy or Occupational Therapy (AHP registered)"
+          data-contract="Full-time / Part-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">💻</div>
+            <h3 class="role-card__title">Tele-Rehabilitation Specialist</h3>
+            <p class="role-card__desc">Deliver physiotherapy and occupational therapy sessions remotely via video platforms and smart home assistants, supporting patient recovery at home.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Home / Clinic hybrid</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="home"
+          data-qualification="Diploma in Biomedical Engineering or Healthcare Technology"
+          data-contract="Full-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">📡</div>
+            <h3 class="role-card__title">AI Health Monitor Technician</h3>
+            <p class="role-card__desc">Install, configure, and maintain AI-driven health monitoring devices (wearables, fall sensors, vital sign trackers) in patients' homes.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Home / Field-based</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="home"
+          data-qualification="WSQ Certificate in Community &amp; Social Services or equivalent"
+          data-contract="Full-time / Part-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">📞</div>
+            <h3 class="role-card__title">Remote Patient Support Officer</h3>
+            <p class="role-card__desc">Assist patients and caregivers in using connected health devices; respond to alerts from monitoring systems and escalate concerns to clinical teams.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Care command centre / Remote</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="home"
+          data-qualification="Diploma in Health Promotion or Nursing"
+          data-contract="Full-time / Part-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">🌿</div>
+            <h3 class="role-card__title">Digital Health Coach</h3>
+            <p class="role-card__desc">Guide residents in adopting healthy habits using smart home apps, wearable data, and personalised wellness plans delivered via digital platforms.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Home / Community / Hybrid</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="home"
+          data-qualification="WSQ Nursing / Care Certificate or equivalent"
+          data-contract="Full-time / Part-time"
+          data-stand="Smart Home Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--home">Home Zone</span>
+            <div class="role-card__icon">🤲</div>
+            <h3 class="role-card__title">Home Care Assistant (Future)</h3>
+            <p class="role-card__desc">Provide personal care and daily living support to seniors, working alongside smart home systems and AI companions to enhance wellbeing at home.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Residential / Home-based</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <!-- NEIGHBOURHOOD OF THE FUTURE -->
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Diploma in Social Work or Community Health"
+          data-contract="Full-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">🧭</div>
+            <h3 class="role-card__title">Community Health Navigator</h3>
+            <p class="role-card__desc">Connect residents to the right health and social services, bridging the gap between community needs and available support networks.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Polyclinic / Community centre</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Degree in Nursing, Allied Health, or Health Services Management"
+          data-contract="Full-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">🏥</div>
+            <h3 class="role-card__title">Polyclinic Care Coordinator</h3>
+            <p class="role-card__desc">Coordinate multi-disciplinary outpatient care at neighbourhood polyclinics, managing patient journeys across GP, specialist, and allied health services.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Polyclinic</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Diploma in Gerontology or Social Work"
+          data-contract="Full-time / Part-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">🌟</div>
+            <h3 class="role-card__title">Active Ageing Programme Officer</h3>
+            <p class="role-card__desc">Design and deliver fitness, social, and cognitive stimulation programmes for seniors at community centres, promoting independence and healthy ageing.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Community centre / Senior care facility</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Degree in Psychology or Social Work (FICA registered)"
+          data-contract="Full-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">🤝</div>
+            <h3 class="role-card__title">Community Mental Health Worker</h3>
+            <p class="role-card__desc">Provide early intervention support, counselling referrals, and mental wellness programmes for residents within the community setting.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Community / Outreach-based</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Diploma in Health Promotion or Public Health"
+          data-contract="Full-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">📢</div>
+            <h3 class="role-card__title">Preventive Health Educator</h3>
+            <p class="role-card__desc">Run community health promotion campaigns and chronic disease prevention workshops, empowering residents to take ownership of their health.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Community / School / Workplace</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="neighbourhood"
+          data-qualification="Diploma in Pharmacy or WSQ Certificate in Community Pharmacy"
+          data-contract="Full-time / Part-time"
+          data-stand="Neighbourhood Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--neighbourhood">Neighbourhood Zone</span>
+            <div class="role-card__icon">💊</div>
+            <h3 class="role-card__title">Community Pharmacy Assistant</h3>
+            <p class="role-card__desc">Support medication dispensing, counsel patients on medication adherence, and deliver health screenings at neighbourhood pharmacies.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Community pharmacy</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <!-- HOSPITAL OF THE FUTURE -->
+        <article class="role-card" data-zone="hospital"
+          data-qualification="Degree in Biomedical Engineering or equivalent technical training"
+          data-contract="Full-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">🤖</div>
+            <h3 class="role-card__title">Surgical Robotics Technician</h3>
+            <p class="role-card__desc">Operate, calibrate, and maintain robotic-assisted surgical systems, supporting surgical teams in minimally invasive procedures of the future.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Operating theatre / Acute hospital</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="hospital"
+          data-qualification="Degree in Data Science, Health Informatics, or Nursing with analytics training"
+          data-contract="Full-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">📊</div>
+            <h3 class="role-card__title">Clinical Data Analyst</h3>
+            <p class="role-card__desc">Analyse patient data and clinical outcomes using AI tools, translating insights into improvements in hospital care pathways and resource planning.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Hospital / Health system</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="hospital"
+          data-qualification="BSc Nursing + Advanced Practice post-graduate qualification"
+          data-contract="Full-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">🩺</div>
+            <h3 class="role-card__title">Advanced Practice Nurse</h3>
+            <p class="role-card__desc">Lead specialist nursing care, conduct advanced clinical assessments, and prescribe medications as part of an extended scope nursing role in acute settings.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Acute hospital / Specialist clinic</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="hospital"
+          data-qualification="Degree in Genomics, Pharmacology, or Clinical Research"
+          data-contract="Full-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">🧬</div>
+            <h3 class="role-card__title">Precision Medicine Coordinator</h3>
+            <p class="role-card__desc">Coordinate personalised treatment plans based on genomic and biomarker data, working across oncology, cardiology, and rare disease teams.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Specialist hospital / Research centre</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="hospital"
+          data-qualification="BSc Radiography or Diagnostic Imaging (AHP registered)"
+          data-contract="Full-time / Part-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">🔬</div>
+            <h3 class="role-card__title">Diagnostic Imaging Radiographer</h3>
+            <p class="role-card__desc">Operate next-generation MRI, CT, PET-CT, and AI-assisted imaging systems to support diagnosis across a range of clinical specialties.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Radiology / Imaging department</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+        <article class="role-card" data-zone="hospital"
+          data-qualification="Degree in Health Informatics, IT, or Healthcare Management"
+          data-contract="Full-time"
+          data-stand="Hospital Zone · Exhibition Level 2">
+          <div class="role-card__top">
+            <span class="role-card__zone-tag zone-tag--hospital">Hospital Zone</span>
+            <div class="role-card__icon">🖥️</div>
+            <h3 class="role-card__title">Healthcare AI Systems Manager</h3>
+            <p class="role-card__desc">Manage AI clinical decision-support tools, ensure data governance compliance, and train clinical staff in AI-enabled hospital systems.</p>
+          </div>
+          <div class="role-card__footer">
+            <span class="role-card__salary">Hospital / Health authority</span>
+            <span class="role-card__learn">Details ›</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ======= ROLE DETAIL MODAL ======= -->
+  <div class="modal-overlay" id="roleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modalTitle">Role Title</h2>
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal__body">
+        <p id="modalDesc">Role description goes here.</p>
+        <div class="modal__divider"></div>
+        <ul class="modal__detail-list">
+          <li><span class="modal__detail-label">Zone</span><span class="modal__detail-value" id="modalZone">—</span></li>
+          <li><span class="modal__detail-label">Work Setting</span><span class="modal__detail-value" id="modalSalary">—</span></li>
+          <li><span class="modal__detail-label">Qualification</span><span class="modal__detail-value" id="modalQuali">—</span></li>
+          <li><span class="modal__detail-label">Contract Type</span><span class="modal__detail-value" id="modalContract">—</span></li>
+          <li><span class="modal__detail-label">Expo Stand</span><span class="modal__detail-value" id="modalStand">—</span></li>
+        </ul>
+        <div class="modal__footer-note">
+          Visit the exhibitor's stand during Job Expo '36 (2 – 4 July 2026) to speak directly with recruiters and learn more about this role.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Job Expo '36</p>
+          <p class="footer__tagline">The Premier Job &amp; Career Exhibition connecting employers and job seekers across Home, Neighbourhood, and Hospital sectors.</p>
+          <p class="footer__dates">📅 2 – 4 July 2026</p>
+        </div>
+        <div>
+          <p class="footer__heading">Pages</p>
+          <nav class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Programme Schedule</a>
+            <a href="exhibition.html">Exhibition Details</a>
+            <a href="job-roles.html">Job Roles</a>
+            <a href="stamp-rally.html">Stamp Rally</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="thanks.html">Thanks &amp; Acknowledgements</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__heading">Zones</p>
+          <nav class="footer__links">
+            <a href="exhibition.html#home-zone">Home Zone</a>
+            <a href="exhibition.html#neighbourhood-zone">Neighbourhood Zone</a>
+            <a href="exhibition.html#hospital-zone">Hospital Zone</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Job Expo '36. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
