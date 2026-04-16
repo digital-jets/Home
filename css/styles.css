@@ -1,17 +1,21 @@
 /* =============================================
    Job Expo '36 (JETS) — Stylesheet
-   Design: Inter + Nexa font, JETS brand palette
+   Design: Nexa font, JETS brand palette
    ============================================= */
 
-/* --- Nexa Bold — place font files in fonts/ at project root --- */
-@font-face {
-  font-family: 'Nexa';
-  src: url('../fonts/NexaBold.woff2') format('woff2'),
-       url('../fonts/NexaBold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* --- Nexa --- */
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Light.woff2') format('woff2'); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-LightItalic.woff2') format('woff2'); font-weight:300; font-style:italic; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Italic.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Book.woff2') format('woff2'); font-weight:500; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-BookItalic.woff2') format('woff2'); font-weight:500; font-style:italic; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Bold.woff2') format('woff2'); font-weight:600 700; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-BoldItalic.woff2') format('woff2'); font-weight:600 700; font-style:italic; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-XBold.woff2') format('woff2'); font-weight:800; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-XBoldItalic.woff2') format('woff2'); font-weight:800; font-style:italic; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-Heavy.woff2') format('woff2'); font-weight:900; font-style:normal; font-display:swap; }
+@font-face { font-family:'Nexa'; src:url('../fonts/Nexa-HeavyItalic.woff2') format('woff2'); font-weight:900; font-style:italic; font-display:swap; }
 
 /* --- CSS Variables --- */
 :root {
@@ -19,10 +23,10 @@
   --brand-teal:      #3bbfd4;   /* softened teal */
   --brand-teal-dark: #2a9ab5;   /* medium teal — links, accents */
   --brand-accent:    #a8edf5;   /* pale cyan — use sparingly */
-  --brand-orange:    #ff8200;   /* orange — stamps, highlights */
+  --brand-orange:      #ff8200;   /* orange — stamps, highlights */
+  --brand-orange-dark: #8b3a05;   /* dark burnt orange — stamp anim text */
   --brand-yellow:    #ffc600;   /* gold — awards, badges */
   --brand-red:       #e4002b;   /* red — hospital zone, alerts */
-  --stamp-orange:    #ff8200;   /* alias for stamp components */
   --stamp-soft:      #ffe4c4;   /* soft orange — stamp backgrounds */
 
   /* Teal scale (derived from brand) */
@@ -67,14 +71,30 @@
   --red-500:      #e4002b;
   --red-600:      #c0001e;
   --red-800:      #7f1d1d;
-  --red-100:      #fde0e5;
+  --red-100:      #fde8ea;
   --red-50:       #fff0f2;
+
+  /* Rose zone — hospital pastel (separate from alert --red-*) */
+  --rose-50:   #fff0f2;
+  --rose-100:  #fde8ea;
+  --rose-300:  #fbc4cc;
+  --rose-dark: #9f1239;
+  --rose-mid:  #be1245;
 
   /* Semantic tokens */
   --primary:        var(--brand-teal);
   --primary-hover:  #2ab5ce;
   --primary-dark:   var(--brand-teal-dark);
   --primary-darker: var(--cyan-900);
+  /* Zone card tints (lighter than zone-100) */
+  --home-tint:          #f0f6ff;
+  --neighbourhood-tint: #f0fdf4;
+  --hospital-tint:      #fff5f7;
+
+  /* Utility */
+  --hero-gradient-start: #cef0f5;
+  --success:             #16a34a;
+
   --bg:             #f0fafb;   /* near-white cyan tint */
   --surface:        #ffffff;
   --text:           var(--slate-900);
@@ -82,8 +102,8 @@
   --border:         var(--slate-200);
 
   /* Typography */
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Nexa', 'Inter', system-ui, -apple-system, sans-serif;
+  --font: 'Nexa', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Nexa', system-ui, -apple-system, sans-serif;
 
   /* Radii */
   --r-sm:  10px;
@@ -184,7 +204,7 @@ ul { list-style: none; }
   border-color: var(--primary-hover);
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(9,169,195,0.38);
+  box-shadow: 0 4px 14px rgba(59,191,212,0.35);
 }
 .btn-outline {
   background: transparent;
@@ -211,7 +231,7 @@ ul { list-style: none; }
 
 /* --- Navigation --- */
 .navbar {
-  background: #ffffff;
+  background: var(--surface);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -299,7 +319,7 @@ ul { list-style: none; }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(160deg, #cef0f5 0%, #ffffff 100%);
+  background: linear-gradient(160deg, var(--hero-gradient-start) 0%, var(--surface) 100%);
   color: var(--slate-800);
   padding: 5rem 0 4rem;
   position: relative;
@@ -407,7 +427,7 @@ ul { list-style: none; }
 
 /* --- Quick-Actions Strip --- */
 .quick-actions {
-  background: #ffffff;
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 1rem 0;
 }
@@ -423,7 +443,7 @@ ul { list-style: none; }
   gap: 0.45rem;
   padding: 0.7rem 1.5rem;
   min-height: 48px;
-  background: #ffffff;
+  background: var(--surface);
   border: 1.5px solid var(--primary);
   border-radius: var(--r-2xl);
   font-family: var(--font);
@@ -471,13 +491,13 @@ ul { list-style: none; }
 .card__color-bar { height: 4px; background: var(--primary); }
 .card__color-bar--home        { background: linear-gradient(90deg, var(--blue-400), var(--blue-100)); }
 .card__color-bar--neighbourhood { background: linear-gradient(90deg, var(--emerald-400), var(--emerald-100)); }
-.card__color-bar--hospital    { background: linear-gradient(90deg, #f26070, #fde8ea); }
+.card__color-bar--hospital    { background: linear-gradient(90deg, var(--red-400), var(--rose-100)); }
 .card__color-bar--default     { background: linear-gradient(90deg, var(--brand-teal), var(--brand-accent)); }
 
 /* Zone-tinted card variants (homepage zone cards) */
 .card--home        { background: linear-gradient(145deg, #dbeafe, #eff6ff); border-color: var(--blue-100); }
 .card--neighbourhood { background: linear-gradient(145deg, #d1fae5, #ecfdf5); border-color: var(--emerald-100); }
-.card--hospital    { background: linear-gradient(145deg, #fde8ea, #fff0f2); border-color: #fbc4cc; }
+.card--hospital    { background: linear-gradient(145deg, var(--rose-100), var(--rose-50)); border-color: var(--rose-300); }
 .card--home .card__title,
 .card--neighbourhood .card__title,
 .card--hospital .card__title { color: var(--slate-900); }
@@ -485,8 +505,8 @@ ul { list-style: none; }
 .card--home .card__link:hover  { color: var(--blue-500); }
 .card--neighbourhood .card__link       { color: var(--emerald-600); }
 .card--neighbourhood .card__link:hover { color: var(--emerald-500); }
-.card--hospital .card__link       { color: #9f1239; }
-.card--hospital .card__link:hover { color: #be1245; }
+.card--hospital .card__link       { color: var(--rose-dark); }
+.card--hospital .card__link:hover { color: var(--rose-mid); }
 .card__body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
 .card__icon { font-size: 2rem; margin-bottom: 0.75rem; line-height: 1; }
 .card__title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--slate-900); margin-bottom: 0.4rem; }
@@ -504,7 +524,7 @@ ul { list-style: none; }
 
 /* --- Page Header (inner pages) --- */
 .page-header {
-  background: linear-gradient(160deg, #cef0f5 0%, #f0fafb 100%);
+  background: linear-gradient(160deg, var(--hero-gradient-start) 0%, var(--bg) 100%);
   color: var(--slate-800);
   padding: 3.5rem 0 2.75rem;
   position: relative;
@@ -699,7 +719,7 @@ ul { list-style: none; }
 /* Zone colour strips on accordion */
 .zone-accordion--home        { border-top: 3px solid var(--blue-400); }
 .zone-accordion--neighbourhood { border-top: 3px solid var(--emerald-400); }
-.zone-accordion--hospital    { border-top: 3px solid #f26070; }
+.zone-accordion--hospital    { border-top: 3px solid var(--red-400); }
 
 /* --- Role Cards (shared: exhibition + job-roles pages) --- */
 .roles-grid {
@@ -892,9 +912,9 @@ ul { list-style: none; }
 }
 
 /* Role card zone tints */
-.role-card[data-zone="home"]         { background: #f0f6ff; }
-.role-card[data-zone="neighbourhood"] { background: #f0fdf4; }
-.role-card[data-zone="hospital"]     { background: #fff5f7; }
+.role-card[data-zone="home"]         { background: var(--home-tint); }
+.role-card[data-zone="neighbourhood"] { background: var(--neighbourhood-tint); }
+.role-card[data-zone="hospital"]     { background: var(--hospital-tint); }
 
 /* --- No Results --- */
 .no-results { display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
@@ -1022,15 +1042,8 @@ ul { list-style: none; }
   gap: 3rem;
   margin-bottom: 3rem;
 }
-.footer__brand-name {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.75rem;
-}
+.footer__brand-logo { height: 40px; width: auto; object-fit: contain; margin-bottom: 0.75rem; display: block; }
 .footer__tagline { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
-.footer__dates { color: var(--brand-accent); font-weight: 600; font-size: 0.88rem; }
 .footer__heading {
   color: rgba(255,255,255,0.5);
   font-size: 0.72rem;
@@ -1056,20 +1069,15 @@ ul { list-style: none; }
   gap: 0.75rem;
   font-size: 0.82rem;
 }
-.footer__social { display: flex; gap: 0.5rem; }
-.footer__social a {
-  color: rgba(255,255,255,0.45);
-  width: 32px;
-  height: 32px;
-  border-radius: var(--r-sm);
-  background: rgba(255,255,255,0.06);
+.footer__partner-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  transition: all var(--t) var(--ease);
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
 }
-.footer__social a:hover { background: var(--primary); color: #fff; }
+.footer__partner-logo { height: 72px; width: auto; object-fit: contain; }
 
 /* =============================================
    RESPONSIVE
@@ -1085,7 +1093,7 @@ ul { list-style: none; }
     position: absolute;
     top: 64px;
     left: 0; right: 0;
-    background: #ffffff;
+    background: var(--surface);
     flex-direction: column;
     padding: 0.75rem;
     gap: 0.15rem;
@@ -1480,7 +1488,7 @@ ul { list-style: none; }
 .fp-zone-icon { font-size: 1.5rem; }
 .fp-home         { background: var(--blue-100); color: var(--blue-600); border-color: var(--blue-200); }
 .fp-neighbourhood { background: var(--emerald-100); color: var(--emerald-600); border-color: var(--emerald-200); grid-row: 1 / 3; }
-.fp-hospital     { background: #fde8ea; color: #9f1239; border-color: #fbc4cc; }
+.fp-hospital     { background: var(--rose-100); color: var(--rose-dark); border-color: var(--rose-300); }
 .fp-learning     { background: var(--cyan-50); color: var(--primary-dark); border-color: var(--cyan-200); grid-column: 1 / 3; font-size: 0.82rem; }
 .floorplan-note  { font-size: 0.75rem; color: var(--text-muted); text-align: center; padding: 0.5rem 1rem 0.75rem; font-style: italic; }
 
@@ -1525,7 +1533,7 @@ ul { list-style: none; }
 .journey-step__icon--1 { background: var(--cyan-50); border: 2px solid var(--cyan-200); }
 .journey-step__icon--2 { background: var(--blue-50); border: 2px solid var(--blue-100); }
 .journey-step__icon--3 { background: var(--emerald-50); border: 2px solid var(--emerald-100); }
-.journey-step__icon--4 { background: #fff0f2; border: 2px solid #fbc4cc; }
+.journey-step__icon--4 { background: var(--rose-50); border: 2px solid var(--rose-300); }
 .journey-step__label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.15rem; }
 .journey-step__name  { font-size: 0.85rem; font-weight: 700; color: var(--slate-800); line-height: 1.3; }
 
@@ -1574,7 +1582,7 @@ ul { list-style: none; }
   font-weight: 600;
 }
 .bp-progress__count { color: var(--slate-900); font-size: 1.05rem; }
-.bp-progress__complete { color: #16a34a; font-weight: 700; }
+.bp-progress__complete { color: var(--success); font-weight: 700; }
 .bp-progress__bar {
   height: 8px;
   background: var(--slate-200);
@@ -1651,7 +1659,7 @@ ul { list-style: none; }
 }
 .stamp.is-stamped:hover { transform: scale(1.05); }
 
-.stamp--orange.is-stamped { border-color: #ff8200; background: #fff3e0; }
+.stamp--orange.is-stamped { border-color: var(--brand-orange); background: #fff3e0; }
 .stamp--blue.is-stamped   { border-color: var(--blue-500); background: var(--blue-50); }
 .stamp--red.is-stamped    { border-color: var(--red-500);  background: var(--red-50); }
 
@@ -1673,7 +1681,7 @@ ul { list-style: none; }
   top: -5px; right: -5px;
   width: 22px; height: 22px;
   border-radius: 50%;
-  background: #16a34a;
+  background: var(--success);
   color: #fff;
   font-size: 11px;
   font-weight: 800;
@@ -1716,9 +1724,9 @@ ul { list-style: none; }
   position: relative;
   overflow: hidden;
 }
-.station-hero--orange { background: linear-gradient(135deg, #5c2800 0%, #ff8200 100%); }
+.station-hero--orange { background: linear-gradient(135deg, #5c2800 0%, var(--brand-orange) 100%); }
 .station-hero--blue   { background: linear-gradient(135deg, #1e3a8a 0%, var(--blue-600) 100%); }
-.station-hero--red    { background: linear-gradient(135deg, #7f1d1d 0%, var(--red-600) 100%); }
+.station-hero--red    { background: linear-gradient(135deg, var(--red-800) 0%, var(--red-600) 100%); }
 
 .station-hero__back {
   display: inline-flex;
@@ -1828,7 +1836,7 @@ ul { list-style: none; }
   border: 6px solid;
   animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
-.stamp-anim__circle--orange { background: #fff3e0; border-color: #ff8200; color: #8B3A05; }
+.stamp-anim__circle--orange { background: #fff3e0; border-color: var(--brand-orange); color: var(--brand-orange-dark); }
 .stamp-anim__circle--blue   { background: var(--blue-50); border-color: var(--blue-500); color: var(--blue-800); }
 .stamp-anim__circle--red    { background: var(--red-50);  border-color: var(--red-500);  color: var(--red-800); }
 .stamp-anim__check { font-size: 3.75rem; line-height: 1; }

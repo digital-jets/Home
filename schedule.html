@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programme Schedule — Job Expo '36</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -25,7 +22,7 @@
         <li><a href="job-roles.html">Job Roles</a></li>
         <li><a href="stamp-rally.html">Stamp Rally</a></li>
         <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="thanks.html">Thanks</a></li>
+        <li><a href="thanks.html">Acknowledgements</a></li>
       </ul>
       <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -67,38 +64,671 @@
 
       <!-- Category tabs -->
       <div class="wo-tabs" role="tablist" aria-label="Select programme type">
-        <button class="wo-tab active" data-wo="tours" role="tab" aria-selected="true">Guided Tour</button>
+        <button class="wo-tab active" data-wo="all" role="tab" aria-selected="true">All</button>
+        <button class="wo-tab" data-wo="tours" role="tab" aria-selected="false">Guided Tour</button>
         <button class="wo-tab" data-wo="roleplay" role="tab" aria-selected="false">Roleplay</button>
         <button class="wo-tab" data-wo="activities" role="tab" aria-selected="false">Activities</button>
         <button class="wo-tab" data-wo="workshops" role="tab" aria-selected="false">Workshops</button>
       </div>
 
+      <!-- ===== ALL ===== -->
+      <div class="wo-section" id="wo-all">
+        <div class="day-tabs">
+          <button class="day-tab active" data-group="all" data-day="0">Thursday - 2 July</button>
+          <button class="day-tab" data-group="all" data-day="1">Friday - 3 July</button>
+          <button class="day-tab" data-group="all" data-day="2">Saturday - 4 July</button>
+        </div>
+
+        <!-- ALL — Thursday 2 July -->
+        <div class="tl-section active">
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Introduction to Smart Home Health Technologies</div>
+              <div class="tl-card-meta">📍 Level 2, Smart Home of the Future Zone &nbsp;·&nbsp; 🏢 Community Health Institute</div>
+              <span class="badge badge--workshop">Workshop</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:10 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:40 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Community Care: Roles of the Future</div>
+              <div class="tl-card-meta">📍 Level 2, Neighbourhood of the Future Zone &nbsp;·&nbsp; 🏢 Organising Office TBC</div>
+              <span class="badge badge--workshop">Workshop</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALL — Friday 3 July -->
+        <div class="tl-section">
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:10 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Advanced Hospital Technologies Showcase</div>
+              <div class="tl-card-meta">📍 Level 2, Hospital of the Future Zone &nbsp;·&nbsp; 🏢 Organising Office TBC</div>
+              <span class="badge badge--workshop">Workshop</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:40 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Digital Health Tools in Community Settings</div>
+              <div class="tl-card-meta">📍 Level 2, Neighbourhood of the Future Zone &nbsp;·&nbsp; 🏢 Organising Office TBC</div>
+              <span class="badge badge--workshop">Workshop</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALL — Saturday 4 July -->
+        <div class="tl-section">
+          <div class="tl-dropin">
+            <p class="tl-dropin__heading">Continuous Drop-In Activities &nbsp;·&nbsp; 9:30 AM – 2:30 PM</p>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">Every 30 mins</span>
+              <span class="tl-dropin__name">CHA Empathy Escape Room</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">All day</span>
+              <span class="tl-dropin__name">JETS Trading Card Café</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+            <div class="tl-dropin__item">
+              <span class="tl-dropin__time">All day</span>
+              <span class="tl-dropin__name">JETS Carnival Booth Games</span>
+              <span class="badge badge--dropin">Drop-In</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Fashion Show Kick-off</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Workforce Innovation in Healthcare</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square &nbsp;·&nbsp; 🏢 Organising Office TBC</div>
+              <span class="badge badge--workshop">Workshop</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:15 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Side Quest: Rapid Fire Kahoot</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Test your knowledge of JETS and the 36 new roles</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:15 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunchtime Fireside Chat</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:45 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Side Quest: This or That?</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Live Q&amp;A — share your views on future healthcare roles</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:45 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Closing Event</div>
+              <div class="tl-card-meta">📍 CHI L4 Kampong Square · Main Stage · Details to be confirmed</div>
+              <span class="badge badge--mainstage">Main Stage</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- end wo-all -->
+
       <!-- ===== GUIDED TOURS ===== -->
-      <div class="wo-section" id="wo-tours">
+      <div class="wo-section" id="wo-tours" hidden>
         <div class="day-tabs">
           <button class="day-tab active" data-group="tours" data-day="t1">Thursday - 2 July</button>
           <button class="day-tab" data-group="tours" data-day="t2">Friday - 3 July</button>
           <button class="day-tab" data-group="tours" data-day="t3">Saturday - 4 July</button>
         </div>
         <div id="t1" class="tl-section active">
-          <div class="tl-tba">
-            <p class="tl-tba__icon">🗺️</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:10 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
           </div>
         </div>
         <div id="t2" class="tl-section">
-          <div class="tl-tba">
-            <p class="tl-tba__icon">🗺️</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:50 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:10 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 1 Partners' Wall &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">JETS Exhibition Tour</div>
+              <div class="tl-card-meta">📍 Level 5 CHI-X &nbsp;·&nbsp; ⏱ 1 hr &nbsp;·&nbsp; Max 15 pax</div>
+              <span class="badge badge--tour">Guided Tour</span>
+            </div>
           </div>
         </div>
         <div id="t3" class="tl-section">
           <div class="tl-tba">
             <p class="tl-tba__icon">🗺️</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Guided tour times and meeting points will be confirmed closer to the event</p>
+            <p class="tl-tba__text">No guided tours on Saturday 4 July</p>
+            <p class="tl-tba__sub">Guided tours run on Thursday and Friday only. Explore the exhibition at your own pace on Saturday.</p>
           </div>
         </div>
       </div>
@@ -111,24 +741,306 @@
           <button class="day-tab" data-group="roleplay" data-day="r3">Saturday - 4 July</button>
         </div>
         <div id="r1" class="tl-section active">
-          <div class="tl-tba">
-            <p class="tl-tba__icon">🎭</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:40 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
           </div>
         </div>
         <div id="r2" class="tl-section">
-          <div class="tl-tba">
-            <p class="tl-tba__icon">🎭</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:30 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:40 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:50 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:10 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:20 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Lunch Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
           </div>
         </div>
         <div id="r3" class="tl-section">
-          <div class="tl-tba">
-            <p class="tl-tba__icon">🎭</p>
-            <p class="tl-tba__text">Programme to be announced</p>
-            <p class="tl-tba__sub">Roleplay session times will be confirmed closer to the event</p>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">9:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:15 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 1.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">10:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:00 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:15 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 2.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">11:45 AM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 3.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">12:45 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 4.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">1:45 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.1</div>
+              <div class="tl-card-meta">🏠 Home Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.2</div>
+              <div class="tl-card-meta">💻 Virtual Care Centre &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-time">2:15 PM</div></div>
+            <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
+            <div class="tl-card">
+              <div class="tl-card-title">Show 5.3</div>
+              <div class="tl-card-meta">🏥 Hospital Zone &nbsp;·&nbsp; ⏱ ~3 min</div>
+              <span class="badge badge--networking">Roleplay</span>
+            </div>
           </div>
         </div>
       </div>
@@ -182,7 +1094,7 @@
 
           <!-- Main Stage timeline -->
           <div class="tl-item">
-            <div class="tl-left"><div class="tl-time">10:00</div></div>
+            <div class="tl-left"><div class="tl-time">10:00 AM</div></div>
             <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
             <div class="tl-card">
               <div class="tl-card-title">Fashion Show Kick-off</div>
@@ -192,7 +1104,7 @@
           </div>
 
           <div class="tl-item">
-            <div class="tl-left"><div class="tl-time">11:00</div></div>
+            <div class="tl-left"><div class="tl-time">11:00 AM</div></div>
             <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
             <div class="tl-card">
               <div class="tl-card-title">Side Quest: Rapid Fire Kahoot</div>
@@ -202,7 +1114,7 @@
           </div>
 
           <div class="tl-item">
-            <div class="tl-left"><div class="tl-time">12:00</div></div>
+            <div class="tl-left"><div class="tl-time">12:00 PM</div></div>
             <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
             <div class="tl-card">
               <div class="tl-card-title">Lunchtime Fireside Chat</div>
@@ -212,7 +1124,7 @@
           </div>
 
           <div class="tl-item">
-            <div class="tl-left"><div class="tl-time">13:00</div></div>
+            <div class="tl-left"><div class="tl-time">1:00 PM</div></div>
             <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
             <div class="tl-card">
               <div class="tl-card-title">Side Quest: This or That?</div>
@@ -222,7 +1134,7 @@
           </div>
 
           <div class="tl-item">
-            <div class="tl-left"><div class="tl-time">14:00</div></div>
+            <div class="tl-left"><div class="tl-time">2:00 PM</div></div>
             <div class="tl-mid"><div class="tl-dot"></div><div class="tl-vline"></div></div>
             <div class="tl-card">
               <div class="tl-card-title">Closing Event</div>
@@ -329,9 +1241,12 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <p class="footer__brand-name">Job Expo '36</p>
-          <p class="footer__tagline">The Premier Job &amp; Career Exhibition connecting employers and job seekers across Home, Neighbourhood, and Hospital sectors.</p>
-          <p class="footer__dates">📅 2 – 4 July 2026</p>
+          <img src="assets/logo.png" alt="Job Expo '36" class="footer__brand-logo">
+          <p class="footer__tagline">Presented by Community Health Institutes (CHI). Discover 36 new healthcare roles shaping home, community, and hospital care in 2036.</p>
+          <div class="footer__partner-logos">
+            <img src="assets/Innovate Logo.png" alt="CHI logo" class="footer__partner-logo">
+            <img src="assets/Future WK for Future H Tag.png" alt="Future Workforce for Future Health" class="footer__partner-logo footer__partner-logo--lg">
+          </div>
         </div>
         <div>
           <p class="footer__heading">Pages</p>
@@ -341,7 +1256,7 @@
             <a href="exhibition.html">Exhibition Details</a>
             <a href="job-roles.html">Job Roles</a>
             <a href="workshops.html">Workshops</a>
-            <a href="thanks.html">Thanks &amp; Acknowledgements</a>
+            <a href="thanks.html">Acknowledgements</a>
           </nav>
         </div>
         <div>
@@ -353,13 +1268,9 @@
           </nav>
         </div>
       </div>
+
       <div class="footer__bottom">
         <span>&copy; 2026 Job Expo '36. All rights reserved.</span>
-        <div class="footer__social">
-          <a href="#" aria-label="Twitter/X">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Facebook">f</a>
-        </div>
       </div>
     </div>
   </footer>
