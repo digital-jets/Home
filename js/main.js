@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const cardTitle = (card.querySelector('.role-card__title') || {}).textContent || '';
       const cardDesc  = (card.querySelector('.role-card__desc')  || {}).textContent || '';
       const match =
-        (zone === 'all' || cardZone === zone) &&
+        (zone === 'all' || (cardZone && cardZone.split(' ').includes(zone))) &&
         (!query || cardTitle.toLowerCase().includes(query) || cardDesc.toLowerCase().includes(query));
 
       card.style.display = match ? '' : 'none';
@@ -149,28 +149,33 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalOverlay) {
     roleCards.forEach(function (card) {
       card.addEventListener('click', function () {
-        const title    = (card.querySelector('.role-card__title') || {}).textContent || '';
-        const desc     = (card.querySelector('.role-card__desc')  || {}).textContent || '';
-        const icon     = (card.querySelector('.role-card__icon')  || {}).textContent || '';
-        const salary   = (card.querySelector('.role-card__salary')|| {}).textContent || '';
-        const zone     = card.getAttribute('data-zone') || '';
-        const quali    = card.getAttribute('data-qualification') || 'Varies by employer';
-        const contract = card.getAttribute('data-contract')      || 'Full-time / Part-time';
-        const stand    = card.getAttribute('data-stand')         || 'See exhibition floor';
-        const zoneLabel = zone.charAt(0).toUpperCase() + zone.slice(1);
+        const title      = (card.querySelector('.role-card__title') || {}).textContent || '';
+        const desc       = card.getAttribute('data-fulldesc') ||
+                           (card.querySelector('.role-card__desc') || {}).textContent || '';
+        const icon       = (card.querySelector('.role-card__icon') || {}).textContent || '';
+        const jr         = card.getAttribute('data-jr')          || '—';
+        const originator = card.getAttribute('data-originator')  || '—';
+        const setting    = card.getAttribute('data-setting')     || '—';
+        const zones      = (card.getAttribute('data-zone') || '').split(' ').map(function (z) {
+          if (z === 'neighbourhood') return 'Community';
+          return z.charAt(0).toUpperCase() + z.slice(1);
+        }).join(' / ');
+        const quali    = card.getAttribute('data-qualification') || '—';
+        const contract = card.getAttribute('data-contract')      || '—';
 
         const set = function (id, val) {
           const el = document.getElementById(id);
           if (el) el.textContent = val;
         };
 
-        set('modalTitle',    icon + ' ' + title);
-        set('modalDesc',     desc);
-        set('modalZone',     zoneLabel + ' Zone');
-        set('modalSalary',   salary);
-        set('modalQuali',    quali);
-        set('modalContract', contract);
-        set('modalStand',    stand);
+        set('modalTitle',      icon + ' ' + title);
+        set('modalDesc',       desc);
+        set('modalJr',         jr);
+        set('modalOriginator', originator);
+        set('modalZone',       zones);
+        set('modalSalary',     setting);
+        set('modalQuali',      quali);
+        set('modalContract',   contract);
 
         modalOverlay.classList.add('open');
         document.body.style.overflow = 'hidden';
