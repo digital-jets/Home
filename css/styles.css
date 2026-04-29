@@ -1513,30 +1513,23 @@ ul { list-style: none; }
 
 /* Visitor journey section */
 .journey-steps {
-  display: flex;
-  gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: nowrap;
   position: relative;
 }
 .journey-step {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 1rem;
   align-items: center;
   text-align: center;
   flex: 1;
   min-width: 0;
   padding: 0 0.5rem;
   position: relative;
-}
-.journey-step:not(:last-child)::after {
-  content: '→';
-  position: absolute;
-  right: -0.25rem;
-  top: 1.5rem;
-  color: var(--slate-400);
-  font-size: 0.9rem;
-  font-weight: 700;
 }
 .journey-step__icon {
   width: 56px;
@@ -1554,11 +1547,19 @@ ul { list-style: none; }
 .journey-step__icon--3 { background: var(--emerald-50); border: 2px solid var(--emerald-100); }
 .journey-step__icon--4 { background: var(--rose-50); border: 2px solid var(--rose-300); }
 .journey-step__label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.15rem; }
-.journey-step__name  { font-size: 0.85rem; font-weight: 700; color: var(--slate-800); line-height: 1.3; }
+.journey-step__name  { font-size: 0.95rem; font-weight: 700; color: var(--slate-800); line-height: 1.3; margin-bottom: 0.35rem; }
+.journey-step__desc  { font-size: 0.83rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+
+/* =============================================
+   JR DETAIL PAGES
+   ============================================= */
+.role-detail__back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--primary); margin-bottom: 2rem; text-decoration: none; }
+.role-detail__back:hover { text-decoration: underline; }
+.role-detail__icon { font-size: 3rem; line-height: 1; margin-bottom: 0.75rem; }
+.role-detail__desc { color: var(--text-muted); line-height: 1.75; font-size: 1rem; margin-bottom: 1.5rem; max-width: 68ch; }
 
 @media (max-width: 520px) {
-  .journey-steps { flex-wrap: wrap; gap: 1rem; }
-  .journey-step { flex: 0 0 45%; }
+  .journey-steps { grid-template-columns: 1fr; gap: 1.25rem; }
   .journey-step:not(:last-child)::after { display: none; }
   .floorplan-diagram { grid-template-columns: 1fr; }
   .fp-neighbourhood { grid-row: auto; }

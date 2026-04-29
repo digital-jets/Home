@@ -149,11 +149,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalOverlay) {
     roleCards.forEach(function (card) {
       card.addEventListener('click', function () {
+        const jr  = card.getAttribute('data-jr') || '—';
+        const num = parseInt(jr.replace('JR', ''), 10);
+        if (num >= 1 && num <= 36) {
+          const inJrFolder = window.location.pathname.includes('/jr/');
+          window.location.href = (inJrFolder ? '' : 'jr/') + 'jr' + num + '.html';
+          return;
+        }
         const title      = (card.querySelector('.role-card__title') || {}).textContent || '';
         const desc       = card.getAttribute('data-fulldesc') ||
                            (card.querySelector('.role-card__desc') || {}).textContent || '';
         const icon       = (card.querySelector('.role-card__icon') || {}).textContent || '';
-        const jr         = card.getAttribute('data-jr')          || '—';
         const originator = card.getAttribute('data-originator')  || '—';
         const setting    = card.getAttribute('data-setting')     || '—';
         const zones      = (card.getAttribute('data-zone') || '').split(' ').map(function (z) {
